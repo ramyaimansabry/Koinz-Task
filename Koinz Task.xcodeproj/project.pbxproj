@@ -10,10 +10,10 @@
 		6D8F658FFE84F5829761311A /* Pods_Koinz_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3257E540188D124E64C1E75 /* Pods_Koinz_Task.framework */; };
 		DC2672642835383800DC2736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2672632835383800DC2736 /* AppDelegate.swift */; };
 		DC2672662835383800DC2736 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2672652835383800DC2736 /* SceneDelegate.swift */; };
-		DC2672682835383800DC2736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2672672835383800DC2736 /* ViewController.swift */; };
-		DC26726B2835383800DC2736 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2672692835383800DC2736 /* Main.storyboard */; };
 		DC26726D2835383A00DC2736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC26726C2835383A00DC2736 /* Assets.xcassets */; };
 		DC2672702835383A00DC2736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC26726E2835383A00DC2736 /* LaunchScreen.storyboard */; };
+		DC2672822835ABD600DC2736 /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2672802835ABD600DC2736 /* MoviesListViewController.swift */; };
+		DC2672832835ABD600DC2736 /* MoviesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC2672812835ABD600DC2736 /* MoviesListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +22,12 @@
 		DC2672602835383800DC2736 /* Koinz Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Koinz Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2672632835383800DC2736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC2672652835383800DC2736 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DC2672672835383800DC2736 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DC26726A2835383800DC2736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC26726C2835383A00DC2736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC26726F2835383A00DC2736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC2672712835383A00DC2736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC2672772835384800DC2736 /* Koinz Task.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Koinz Task.entitlements"; sourceTree = "<group>"; };
+		DC2672802835ABD600DC2736 /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
+		DC2672812835ABD600DC2736 /* MoviesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesListViewController.xib; sourceTree = "<group>"; };
 		F0F87DCB0D2D2C5AEFEB67EA /* Pods-Koinz Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koinz Task.debug.xcconfig"; path = "Target Support Files/Pods-Koinz Task/Pods-Koinz Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +49,6 @@
 				F0F87DCB0D2D2C5AEFEB67EA /* Pods-Koinz Task.debug.xcconfig */,
 				604C33998AC39902B9CE88D8 /* Pods-Koinz Task.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,16 +81,72 @@
 		DC2672622835383800DC2736 /* Koinz Task */ = {
 			isa = PBXGroup;
 			children = (
-				DC2672772835384800DC2736 /* Koinz Task.entitlements */,
-				DC2672632835383800DC2736 /* AppDelegate.swift */,
-				DC2672652835383800DC2736 /* SceneDelegate.swift */,
-				DC2672672835383800DC2736 /* ViewController.swift */,
-				DC2672692835383800DC2736 /* Main.storyboard */,
-				DC26726C2835383A00DC2736 /* Assets.xcassets */,
-				DC26726E2835383A00DC2736 /* LaunchScreen.storyboard */,
-				DC2672712835383A00DC2736 /* Info.plist */,
+				DC26727B2835AB7900DC2736 /* Scenes */,
+				DC26727A2835AA8600DC2736 /* Application */,
+				DC2672792835AA7200DC2736 /* Resources */,
+				DC2672782835AA5600DC2736 /* Configurations */,
 			);
 			path = "Koinz Task";
+			sourceTree = "<group>";
+		};
+		DC2672782835AA5600DC2736 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				DC2672712835383A00DC2736 /* Info.plist */,
+				DC2672772835384800DC2736 /* Koinz Task.entitlements */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		DC2672792835AA7200DC2736 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DC26726C2835383A00DC2736 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DC26727A2835AA8600DC2736 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DC2672632835383800DC2736 /* AppDelegate.swift */,
+				DC2672652835383800DC2736 /* SceneDelegate.swift */,
+				DC26726E2835383A00DC2736 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DC26727B2835AB7900DC2736 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DC26727C2835AB8300DC2736 /* Movies List */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DC26727C2835AB8300DC2736 /* Movies List */ = {
+			isa = PBXGroup;
+			children = (
+				DC26727E2835ABAE00DC2736 /* Presentation */,
+			);
+			path = "Movies List";
+			sourceTree = "<group>";
+		};
+		DC26727E2835ABAE00DC2736 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DC26727F2835ABB700DC2736 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DC26727F2835ABB700DC2736 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC2672802835ABD600DC2736 /* MoviesListViewController.swift */,
+				DC2672812835ABD600DC2736 /* MoviesListViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +211,7 @@
 			files = (
 				DC2672702835383A00DC2736 /* LaunchScreen.storyboard in Resources */,
 				DC26726D2835383A00DC2736 /* Assets.xcassets in Resources */,
-				DC26726B2835383800DC2736 /* Main.storyboard in Resources */,
+				DC2672832835ABD600DC2736 /* MoviesListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,23 +264,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC2672682835383800DC2736 /* ViewController.swift in Sources */,
 				DC2672642835383800DC2736 /* AppDelegate.swift in Sources */,
 				DC2672662835383800DC2736 /* SceneDelegate.swift in Sources */,
+				DC2672822835ABD600DC2736 /* MoviesListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DC2672692835383800DC2736 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC26726A2835383800DC2736 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DC26726E2835383A00DC2736 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -359,14 +406,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Koinz Task/Koinz Task.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Koinz Task/Configurations/Koinz Task.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Koinz Task/Info.plist";
+				INFOPLIST_FILE = "Koinz Task/Configurations/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -390,14 +436,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Koinz Task/Koinz Task.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Koinz Task/Configurations/Koinz Task.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Koinz Task/Info.plist";
+				INFOPLIST_FILE = "Koinz Task/Configurations/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
