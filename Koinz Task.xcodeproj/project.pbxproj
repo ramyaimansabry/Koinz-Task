@@ -161,6 +161,7 @@
 				DC26725D2835383800DC2736 /* Frameworks */,
 				DC26725E2835383800DC2736 /* Resources */,
 				BCF94B86E96386AF6FFD69B2 /* [CP] Embed Pods Frameworks */,
+				DC2672842835B03600DC2736 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -256,6 +257,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Koinz Task/Pods-Koinz Task-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DC2672842835B03600DC2736 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
