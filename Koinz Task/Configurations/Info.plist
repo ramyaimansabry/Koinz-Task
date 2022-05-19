@@ -19,5 +19,13 @@
 			</array>
 		</dict>
 	</dict>
+	<key>SERVER_HOST</key>
+	<string>$(SERVER_HOST)</string>
+	<key>SERVER_SCHEME</key>
+	<string>$(SERVER_SCHEME)</string>
+	<key>MOVIES_API_KEY</key>
+	<string>$(MOVIES_API_KEY)</string>
+	<key>MOVIES_API_ACCESS_TOKEN</key>
+	<string>$(MOVIES_API_ACCESS_TOKEN)</string>
 </dict>
 </plist>
