@@ -232,19 +232,19 @@
 		DC26727B2835AB7900DC2736 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				DC26727C2835AB8300DC2736 /* Movies List */,
+				DC26727C2835AB8300DC2736 /* Movies List Screen */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		DC26727C2835AB8300DC2736 /* Movies List */ = {
+		DC26727C2835AB8300DC2736 /* Movies List Screen */ = {
 			isa = PBXGroup;
 			children = (
 				DC2E721528361682008AFF68 /* Repository */,
 				DC2E72102835C4E8008AFF68 /* Entities */,
 				DC2E721A283616D6008AFF68 /* Presentation */,
 			);
-			path = "Movies List";
+			path = "Movies List Screen";
 			sourceTree = "<group>";
 		};
 		DC26727F2835ABB700DC2736 /* View */ = {
