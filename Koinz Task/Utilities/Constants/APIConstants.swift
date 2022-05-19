@@ -8,5 +8,5 @@
 import Foundation
 
 enum APIConstants: String, CaseIterable {
-    case getMoviesList = "empty"
+    case topRatedMovies = "/3/movie/top_rated?page=%@"
 }

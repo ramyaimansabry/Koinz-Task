@@ -93,6 +93,8 @@ class APIBuilder {
             fatalError("API should contain at least one path.")
         }
         
+        setAPIKey()
+        
         self.urlRequest.setValue(ContentType.json, forHTTPHeaderField: HTTPHeader.contentType)
         return self.urlRequest
     }
@@ -104,5 +106,12 @@ private extension APIBuilder {
         let baseAppend = base?.appendingPathComponent(path).absoluteString.removingPercentEncoding
         guard let baseAppend = baseAppend, let newURL = URL(string: baseAppend) else { return }
         self.urlRequest.url = newURL
+    }
+    
+    func setAPIKey() -> APIBuilder {
+        guard let url = self.urlRequest.url else { return self }
+        let absoluteURLString: String = url.absoluteString + "&&api_key=\(clientID)"
+        self.urlRequest.url = URL(string: absoluteURLString)
+        return self
     }
 }

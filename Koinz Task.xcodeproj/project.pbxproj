@@ -62,6 +62,10 @@
 		DC2E72042835B318008AFF68 /* NSObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E71CB2835B318008AFF68 /* NSObject+Helpers.swift */; };
 		DC2E72052835B318008AFF68 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E71CD2835B318008AFF68 /* Data+Helpers.swift */; };
 		DC2E72092835C13D008AFF68 /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E72082835C13D008AFF68 /* MoviesListViewModel.swift */; };
+		DC2E72122835C4F5008AFF68 /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E72112835C4F5008AFF68 /* MoviesResponse.swift */; };
+		DC2E72142835C50D008AFF68 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E72132835C50D008AFF68 /* MovieData.swift */; };
+		DC2E72172836169E008AFF68 /* MoviesListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E72162836169E008AFF68 /* MoviesListRepository.swift */; };
+		DC2E7219283616B3008AFF68 /* MoviesListRepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E7218283616B3008AFF68 /* MoviesListRepositoryContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +128,10 @@
 		DC2E71CB2835B318008AFF68 /* NSObject+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Helpers.swift"; sourceTree = "<group>"; };
 		DC2E71CD2835B318008AFF68 /* Data+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Helpers.swift"; sourceTree = "<group>"; };
 		DC2E72082835C13D008AFF68 /* MoviesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModel.swift; sourceTree = "<group>"; };
+		DC2E72112835C4F5008AFF68 /* MoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponse.swift; sourceTree = "<group>"; };
+		DC2E72132835C50D008AFF68 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
+		DC2E72162836169E008AFF68 /* MoviesListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListRepository.swift; sourceTree = "<group>"; };
+		DC2E7218283616B3008AFF68 /* MoviesListRepositoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListRepositoryContract.swift; sourceTree = "<group>"; };
 		F0F87DCB0D2D2C5AEFEB67EA /* Pods-Koinz Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koinz Task.debug.xcconfig"; path = "Target Support Files/Pods-Koinz Task/Pods-Koinz Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,19 +232,11 @@
 		DC26727C2835AB8300DC2736 /* Movies List */ = {
 			isa = PBXGroup;
 			children = (
-				DC2E72072835C0EA008AFF68 /* Domain */,
-				DC26727E2835ABAE00DC2736 /* Presentation */,
+				DC2E721528361682008AFF68 /* Repository */,
+				DC2E72102835C4E8008AFF68 /* Entities */,
+				DC2E721A283616D6008AFF68 /* Presentation */,
 			);
 			path = "Movies List";
-			sourceTree = "<group>";
-		};
-		DC26727E2835ABAE00DC2736 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				DC2E72062835C0D2008AFF68 /* ViewModel */,
-				DC26727F2835ABB700DC2736 /* View */,
-			);
-			path = Presentation;
 			sourceTree = "<group>";
 		};
 		DC26727F2835ABB700DC2736 /* View */ = {
@@ -622,11 +622,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		DC2E72072835C0EA008AFF68 /* Domain */ = {
+		DC2E72102835C4E8008AFF68 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				DC2E72112835C4F5008AFF68 /* MoviesResponse.swift */,
+				DC2E72132835C50D008AFF68 /* MovieData.swift */,
 			);
-			path = Domain;
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DC2E721528361682008AFF68 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DC2E72162836169E008AFF68 /* MoviesListRepository.swift */,
+				DC2E7218283616B3008AFF68 /* MoviesListRepositoryContract.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DC2E721A283616D6008AFF68 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DC2E72062835C0D2008AFF68 /* ViewModel */,
+				DC26727F2835ABB700DC2736 /* View */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -767,6 +787,7 @@
 				DC2E71DD2835B318008AFF68 /* KeychainError.swift in Sources */,
 				DC2E71D52835B318008AFF68 /* Constants.swift in Sources */,
 				DC2E71E52835B318008AFF68 /* CredentialsProtocol.swift in Sources */,
+				DC2E72172836169E008AFF68 /* MoviesListRepository.swift in Sources */,
 				DC2E71F92835B318008AFF68 /* Images+Assets.swift in Sources */,
 				DC2E72022835B318008AFF68 /* View+Helpers.swift in Sources */,
 				DC2E71F82835B318008AFF68 /* ProgressHUDAnimationType.swift in Sources */,
@@ -788,6 +809,7 @@
 				DC2E71D22835B318008AFF68 /* APIServiceContract.swift in Sources */,
 				DC2E71D12835B318008AFF68 /* NetworkParameters.swift in Sources */,
 				DC2E71D72835B318008AFF68 /* ErrorConstants.swift in Sources */,
+				DC2E72122835C4F5008AFF68 /* MoviesResponse.swift in Sources */,
 				DC2E71F02835B318008AFF68 /* AsyncImageView.swift in Sources */,
 				DC2E71EF2835B318008AFF68 /* AlertItem.swift in Sources */,
 				DC2E71E32835B318008AFF68 /* ErrorType+Message.swift in Sources */,
@@ -805,10 +827,12 @@
 				DC2E71D92835B318008AFF68 /* NetworkConstants.swift in Sources */,
 				DC2E71EA2835B318008AFF68 /* BaseViewModel.swift in Sources */,
 				DC2E71D42835B318008AFF68 /* APIBuilder.swift in Sources */,
+				DC2E7219283616B3008AFF68 /* MoviesListRepositoryContract.swift in Sources */,
 				DC2E71E22835B318008AFF68 /* ErrorType+Code.swift in Sources */,
 				DC2E71F52835B318008AFF68 /* ProgressHUD.swift in Sources */,
 				DC2672822835ABD600DC2736 /* MoviesListViewController.swift in Sources */,
 				DC2E71E02835B318008AFF68 /* BaseError.swift in Sources */,
+				DC2E72142835C50D008AFF68 /* MovieData.swift in Sources */,
 				DC2E72002835B318008AFF68 /* UITableView+Helpers.swift in Sources */,
 				DC2E71E12835B318008AFF68 /* ErrorResolver.swift in Sources */,
 				DC2E71DF2835B318008AFF68 /* EnvironmentManager.swift in Sources */,

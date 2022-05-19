@@ -8,9 +8,11 @@
 import UIKit
 
 class MoviesListViewController: BaseViewController, LoadingDisplayerProtocol {
-
+    private var viewModel = MoviesListViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        bindLoadingIndicator(to: viewModel.stateRelay)
+        viewModel.fetchMovies()
     }
 }
