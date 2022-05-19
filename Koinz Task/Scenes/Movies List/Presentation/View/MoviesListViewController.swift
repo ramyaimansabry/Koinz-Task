@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MoviesListViewController: UIViewController {
+class MoviesListViewController: BaseViewController, LoadingDisplayerProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()

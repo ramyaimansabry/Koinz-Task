@@ -61,6 +61,7 @@
 		DC2E72032835B318008AFF68 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E71C92835B318008AFF68 /* String+Helpers.swift */; };
 		DC2E72042835B318008AFF68 /* NSObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E71CB2835B318008AFF68 /* NSObject+Helpers.swift */; };
 		DC2E72052835B318008AFF68 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E71CD2835B318008AFF68 /* Data+Helpers.swift */; };
+		DC2E72092835C13D008AFF68 /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E72082835C13D008AFF68 /* MoviesListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 		DC2E71C92835B318008AFF68 /* String+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		DC2E71CB2835B318008AFF68 /* NSObject+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Helpers.swift"; sourceTree = "<group>"; };
 		DC2E71CD2835B318008AFF68 /* Data+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Helpers.swift"; sourceTree = "<group>"; };
+		DC2E72082835C13D008AFF68 /* MoviesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModel.swift; sourceTree = "<group>"; };
 		F0F87DCB0D2D2C5AEFEB67EA /* Pods-Koinz Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koinz Task.debug.xcconfig"; path = "Target Support Files/Pods-Koinz Task/Pods-Koinz Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +224,7 @@
 		DC26727C2835AB8300DC2736 /* Movies List */ = {
 			isa = PBXGroup;
 			children = (
+				DC2E72072835C0EA008AFF68 /* Domain */,
 				DC26727E2835ABAE00DC2736 /* Presentation */,
 			);
 			path = "Movies List";
@@ -230,6 +233,7 @@
 		DC26727E2835ABAE00DC2736 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DC2E72062835C0D2008AFF68 /* ViewModel */,
 				DC26727F2835ABB700DC2736 /* View */,
 			);
 			path = Presentation;
@@ -610,6 +614,21 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		DC2E72062835C0D2008AFF68 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC2E72082835C13D008AFF68 /* MoviesListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DC2E72072835C0EA008AFF68 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -762,6 +781,7 @@
 				DC2672662835383800DC2736 /* SceneDelegate.swift in Sources */,
 				DC2E71F42835B318008AFF68 /* ProgressView.swift in Sources */,
 				DC2E71F72835B318008AFF68 /* ProgressHUDAlertIcon.swift in Sources */,
+				DC2E72092835C13D008AFF68 /* MoviesListViewModel.swift in Sources */,
 				DC2E71EC2835B318008AFF68 /* DisposeObject.swift in Sources */,
 				DC2E71F62835B318008AFF68 /* ProgressHUDAnimatedIcon.swift in Sources */,
 				DC2E72032835B318008AFF68 /* String+Helpers.swift in Sources */,
