@@ -108,10 +108,9 @@ private extension APIBuilder {
         self.urlRequest.url = newURL
     }
     
-    func setAPIKey() -> APIBuilder {
-        guard let url = self.urlRequest.url else { return self }
+    func setAPIKey() {
+        guard let url = self.urlRequest.url else { return }
         let absoluteURLString: String = url.absoluteString + "&&api_key=\(clientID)"
         self.urlRequest.url = URL(string: absoluteURLString)
-        return self
     }
 }

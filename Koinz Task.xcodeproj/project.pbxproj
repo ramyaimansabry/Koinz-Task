@@ -66,6 +66,10 @@
 		DC2E72142835C50D008AFF68 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E72132835C50D008AFF68 /* MovieData.swift */; };
 		DC2E72172836169E008AFF68 /* MoviesListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E72162836169E008AFF68 /* MoviesListRepository.swift */; };
 		DC2E7219283616B3008AFF68 /* MoviesListRepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E7218283616B3008AFF68 /* MoviesListRepositoryContract.swift */; };
+		DC2E722128368042008AFF68 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E721F28368042008AFF68 /* MovieCell.swift */; };
+		DC2E722228368042008AFF68 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC2E722028368042008AFF68 /* MovieCell.xib */; };
+		DC2E722728369266008AFF68 /* ImagesConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E722628369266008AFF68 /* ImagesConfiguration.swift */; };
+		DC2E722928369274008AFF68 /* ImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E722828369274008AFF68 /* ImageSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +136,10 @@
 		DC2E72132835C50D008AFF68 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
 		DC2E72162836169E008AFF68 /* MoviesListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListRepository.swift; sourceTree = "<group>"; };
 		DC2E7218283616B3008AFF68 /* MoviesListRepositoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListRepositoryContract.swift; sourceTree = "<group>"; };
+		DC2E721F28368042008AFF68 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		DC2E722028368042008AFF68 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		DC2E722628369266008AFF68 /* ImagesConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesConfiguration.swift; sourceTree = "<group>"; };
+		DC2E722828369274008AFF68 /* ImageSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSize.swift; sourceTree = "<group>"; };
 		F0F87DCB0D2D2C5AEFEB67EA /* Pods-Koinz Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koinz Task.debug.xcconfig"; path = "Target Support Files/Pods-Koinz Task/Pods-Koinz Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,6 +252,7 @@
 			children = (
 				DC2672802835ABD600DC2736 /* MoviesListViewController.swift */,
 				DC2672812835ABD600DC2736 /* MoviesListViewController.xib */,
+				DC2E721E28367FF3008AFF68 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -627,6 +636,8 @@
 			children = (
 				DC2E72112835C4F5008AFF68 /* MoviesResponse.swift */,
 				DC2E72132835C50D008AFF68 /* MovieData.swift */,
+				DC2E722628369266008AFF68 /* ImagesConfiguration.swift */,
+				DC2E722828369274008AFF68 /* ImageSize.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -647,6 +658,15 @@
 				DC26727F2835ABB700DC2736 /* View */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DC2E721E28367FF3008AFF68 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DC2E721F28368042008AFF68 /* MovieCell.swift */,
+				DC2E722028368042008AFF68 /* MovieCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -712,6 +732,7 @@
 			files = (
 				DC2672702835383A00DC2736 /* LaunchScreen.storyboard in Resources */,
 				DC26726D2835383A00DC2736 /* Assets.xcassets in Resources */,
+				DC2E722228368042008AFF68 /* MovieCell.xib in Resources */,
 				DC2672832835ABD600DC2736 /* MoviesListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -790,11 +811,13 @@
 				DC2E72172836169E008AFF68 /* MoviesListRepository.swift in Sources */,
 				DC2E71F92835B318008AFF68 /* Images+Assets.swift in Sources */,
 				DC2E72022835B318008AFF68 /* View+Helpers.swift in Sources */,
+				DC2E722928369274008AFF68 /* ImageSize.swift in Sources */,
 				DC2E71F82835B318008AFF68 /* ProgressHUDAnimationType.swift in Sources */,
 				DC2E71CE2835B318008AFF68 /* NetworkMethods.swift in Sources */,
 				DC2E71F32835B318008AFF68 /* ProgressDisplayer.swift in Sources */,
 				DC2E72052835B318008AFF68 /* Data+Helpers.swift in Sources */,
 				DC2E71FF2835B318008AFF68 /* Optional+Helpers.swift in Sources */,
+				DC2E722728369266008AFF68 /* ImagesConfiguration.swift in Sources */,
 				DC2E72042835B318008AFF68 /* NSObject+Helpers.swift in Sources */,
 				DC2E71ED2835B318008AFF68 /* BaseViewController.swift in Sources */,
 				DC2E71D82835B318008AFF68 /* KeychainConstants.swift in Sources */,
@@ -825,6 +848,7 @@
 				DC2E71D62835B318008AFF68 /* APIConstants.swift in Sources */,
 				DC2E71D32835B318008AFF68 /* APIService.swift in Sources */,
 				DC2E71D92835B318008AFF68 /* NetworkConstants.swift in Sources */,
+				DC2E722128368042008AFF68 /* MovieCell.swift in Sources */,
 				DC2E71EA2835B318008AFF68 /* BaseViewModel.swift in Sources */,
 				DC2E71D42835B318008AFF68 /* APIBuilder.swift in Sources */,
 				DC2E7219283616B3008AFF68 /* MoviesListRepositoryContract.swift in Sources */,
@@ -994,6 +1018,7 @@
 				MARKETING_VERSION = 1.0.0;
 				MOVIES_API_ACCESS_TOKEN = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMjlkMjNkNTQwNzU2ZDMzODUwMzY0YWFlNzZkZjk2YiIsInN1YiI6IjYyNTU4OWY5NjZhZTRkMTJkZGJmM2I5MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.muDlAE4VU6GZL5oIAnbqFLtkcmxdh8DFlQuNh2LFXPo;
 				MOVIES_API_KEY = a29d23d540756d33850364aae76df96b;
+				MOVIE_IMAGE_URL = "https://image.tmdb.org/t/p/";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ramysabry1996.Koinz-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SERVER_HOST = api.themoviedb.org;
@@ -1028,6 +1053,7 @@
 				MARKETING_VERSION = 1.0.0;
 				MOVIES_API_ACCESS_TOKEN = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMjlkMjNkNTQwNzU2ZDMzODUwMzY0YWFlNzZkZjk2YiIsInN1YiI6IjYyNTU4OWY5NjZhZTRkMTJkZGJmM2I5MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.muDlAE4VU6GZL5oIAnbqFLtkcmxdh8DFlQuNh2LFXPo;
 				MOVIES_API_KEY = a29d23d540756d33850364aae76df96b;
+				MOVIE_IMAGE_URL = "https://image.tmdb.org/t/p/";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ramysabry1996.Koinz-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SERVER_HOST = api.themoviedb.org;

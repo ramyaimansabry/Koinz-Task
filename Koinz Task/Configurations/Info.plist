@@ -27,5 +27,7 @@
 	<string>$(MOVIES_API_KEY)</string>
 	<key>MOVIES_API_ACCESS_TOKEN</key>
 	<string>$(MOVIES_API_ACCESS_TOKEN)</string>
+	<key>MOVIE_IMAGE_URL</key>
+	<string>$(MOVIE_IMAGE_URL)</string>
 </dict>
 </plist>

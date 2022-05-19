@@ -14,9 +14,9 @@ extension UITableView {
     }
     
     /// dequeue cell with generics
-    func dequeue<T: UITableViewCell>(at indexPath: IndexPath) -> T {
+    func dequeue<T: UITableViewCell>() -> T {
         guard
-            let cell = dequeueReusableCell(withIdentifier: String(describing: T.self), for: indexPath) as? T
+            let cell = dequeueReusableCell(withIdentifier: String(describing: T.self)) as? T
         else { fatalError("Could not deque cell with type \(T.self)") }
         return cell
     }

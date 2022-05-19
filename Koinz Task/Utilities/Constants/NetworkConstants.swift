@@ -24,4 +24,6 @@ enum NetworkConstants {
         
         return "\(scheme)://\(host)"
     }
+    
+    static let imageURL = EnvironmentManager.shared.string(key: .imageURL)
 }

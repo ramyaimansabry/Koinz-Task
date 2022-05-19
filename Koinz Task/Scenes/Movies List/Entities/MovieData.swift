@@ -38,3 +38,10 @@ struct MovieData: Decodable {
         case voteCount = "vote_count"
     }
 }
+
+extension MovieData {
+    var posterFullURL: String? {
+        guard let posterPath: String = posterPath else { return nil }
+        return NetworkConstants.imageURL + ImageSize.w500.rawValue + posterPath
+    }
+}
