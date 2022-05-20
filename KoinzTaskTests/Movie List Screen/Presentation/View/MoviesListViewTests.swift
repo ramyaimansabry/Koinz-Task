@@ -22,10 +22,6 @@ class MoviesListViewTests: XCTestCase {
         super.tearDown()
     }
     
-    func testSUT_koko() {
-        XCTAssertTrue(true)
-    }
-    
     func testSUT_whenInit_showDefaultAppearance() {
         assertSnapshot(matching: sut, as: .image)
     }
