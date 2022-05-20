@@ -9,14 +9,14 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class MoviesListViewController: BaseViewController, LoadingDisplayerProtocol {
+class MoviesListViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var viewModel = MoviesListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindLoadingIndicator(to: viewModel.stateRelay)
+        configureLoadingAndAlertViews()
         setupTableView()
         viewModel.fetchMovies()
     }
@@ -66,5 +66,14 @@ private extension MoviesListViewController {
 extension MoviesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.frame.width / 2
+    }
+}
+
+// MARK: - AlertDisplayer & LoadingDisplayer
+
+extension MoviesListViewController: AlertDisplayerProtocol, LoadingDisplayerProtocol {
+    func configureLoadingAndAlertViews() {
+        bindLoadingIndicator(to: viewModel.stateRelay)
+        bindAlert(to: viewModel.alertItemRelay)
     }
 }

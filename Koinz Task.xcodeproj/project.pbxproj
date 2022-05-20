@@ -73,6 +73,7 @@
 		DC2E72382836A6C9008AFF68 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E72332836A6C9008AFF68 /* MovieDetailsViewModel.swift */; };
 		DC2E72392836A6C9008AFF68 /* MovieDetailsViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E72352836A6C9008AFF68 /* MovieDetailsViewViewController.swift */; };
 		DC2E723A2836A6C9008AFF68 /* MovieDetailsViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC2E72362836A6C9008AFF68 /* MovieDetailsViewViewController.xib */; };
+		DC2E723C28378D5A008AFF68 /* AlertDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E723B28378D5A008AFF68 /* AlertDisplayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +147,7 @@
 		DC2E72332836A6C9008AFF68 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		DC2E72352836A6C9008AFF68 /* MovieDetailsViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewViewController.swift; sourceTree = "<group>"; };
 		DC2E72362836A6C9008AFF68 /* MovieDetailsViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailsViewViewController.xib; sourceTree = "<group>"; };
+		DC2E723B28378D5A008AFF68 /* AlertDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayer.swift; sourceTree = "<group>"; };
 		F0F87DCB0D2D2C5AEFEB67EA /* Pods-Koinz Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koinz Task.debug.xcconfig"; path = "Target Support Files/Pods-Koinz Task/Pods-Koinz Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -452,6 +454,7 @@
 			children = (
 				DC2E719E2835B318008AFF68 /* AlertAction.swift */,
 				DC2E719F2835B318008AFF68 /* AlertItem.swift */,
+				DC2E723B28378D5A008AFF68 /* AlertDisplayer.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -848,6 +851,7 @@
 			files = (
 				DC2672642835383800DC2736 /* AppDelegate.swift in Sources */,
 				DC2E71DD2835B318008AFF68 /* KeychainError.swift in Sources */,
+				DC2E723C28378D5A008AFF68 /* AlertDisplayer.swift in Sources */,
 				DC2E71D52835B318008AFF68 /* Constants.swift in Sources */,
 				DC2E71E52835B318008AFF68 /* CredentialsProtocol.swift in Sources */,
 				DC2E72172836169E008AFF68 /* MoviesListRepository.swift in Sources */,

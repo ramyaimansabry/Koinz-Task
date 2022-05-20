@@ -23,26 +23,3 @@ extension UIApplication {
         UIApplication.shared.windows.first(where: { $0.isKeyWindow })
     }
 }
-
-extension UIApplication {
-    func showAlertView(
-        _ alertData: AlertItem,
-        completion: @escaping () -> Void
-    ) {
-        guard let topController = topController,
-              !(topController is UIAlertController)
-        else {
-            return
-        }
-        
-        let alert = UIAlertController(
-            title: alertData.title,
-            message: alertData.message,
-            preferredStyle: alertData.style
-        )
-        for action in alertData.actions {
-            alert.addAction(action.toUIAlertAction)
-        }
-        topController.present(alert, animated: true, completion: completion)
-    }
-}

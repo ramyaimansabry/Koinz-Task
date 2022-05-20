@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieDetailsViewViewController: BaseViewController {
+class MovieDetailsViewViewController: BaseViewController, AlertDisplayerProtocol {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var photoImageView: AsyncImageView!
     
@@ -24,7 +24,12 @@ class MovieDetailsViewViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindAlert(to: viewModel.alertItemRelay)
         setupScrollView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         loadPhotoImage()
     }
 
