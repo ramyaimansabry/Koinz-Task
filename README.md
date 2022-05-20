@@ -1,7 +1,7 @@
 
 # Koinz Movies Task
 
-A simple UIKit app that displays movies using TheMoviesDB API for Koinz company
+A simple UIKit app that displays top rated movies using TheMoviesDB API
 
 <br />
 
