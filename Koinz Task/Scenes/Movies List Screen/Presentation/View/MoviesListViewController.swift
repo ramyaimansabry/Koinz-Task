@@ -27,6 +27,7 @@ class MoviesListViewController: BaseViewController, LoadingDisplayerProtocol {
 private extension MoviesListViewController {
     func setupTableView() {
         tableView.registerCellNib(MovieCell.self)
+        
         tableView
             .rx
             .setDelegate(self)
@@ -41,6 +42,21 @@ private extension MoviesListViewController {
                 return cell
             }
             .disposed(by: disposeBag)
+        
+        tableView
+            .rx
+            .modelSelected(MovieData.self)
+            .subscribe(onNext: { [weak self] movieData in
+                guard let self = self else { return }
+                self.handleOnSelectMovie(with: movieData)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func handleOnSelectMovie(with movieData: MovieData) {
+        let movieDatailsViewController = MovieDetailsViewViewController(posterPath: movieData.posterPath)
+        movieDatailsViewController.modalPresentationStyle = .fullScreen
+        present(movieDatailsViewController, animated: true, completion: nil)
     }
 }
 
