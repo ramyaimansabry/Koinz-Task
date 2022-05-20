@@ -74,6 +74,7 @@
 		DC2E72392836A6C9008AFF68 /* MovieDetailsViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E72352836A6C9008AFF68 /* MovieDetailsViewViewController.swift */; };
 		DC2E723A2836A6C9008AFF68 /* MovieDetailsViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC2E72362836A6C9008AFF68 /* MovieDetailsViewViewController.xib */; };
 		DC2E723C28378D5A008AFF68 /* AlertDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E723B28378D5A008AFF68 /* AlertDisplayer.swift */; };
+		DC2E723F283790BA008AFF68 /* UIScrollView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E723E283790BA008AFF68 /* UIScrollView+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +149,7 @@
 		DC2E72352836A6C9008AFF68 /* MovieDetailsViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewViewController.swift; sourceTree = "<group>"; };
 		DC2E72362836A6C9008AFF68 /* MovieDetailsViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailsViewViewController.xib; sourceTree = "<group>"; };
 		DC2E723B28378D5A008AFF68 /* AlertDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayer.swift; sourceTree = "<group>"; };
+		DC2E723E283790BA008AFF68 /* UIScrollView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Helpers.swift"; sourceTree = "<group>"; };
 		F0F87DCB0D2D2C5AEFEB67EA /* Pods-Koinz Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koinz Task.debug.xcconfig"; path = "Target Support Files/Pods-Koinz Task/Pods-Koinz Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -539,6 +541,7 @@
 		DC2E71B72835B318008AFF68 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DC2E723D283790AD008AFF68 /* UIScrollView */,
 				DC2E71B82835B318008AFF68 /* Collection */,
 				DC2E71BA2835B318008AFF68 /* UIApplication */,
 				DC2E71BC2835B318008AFF68 /* Publisher */,
@@ -711,6 +714,14 @@
 				DC2E72362836A6C9008AFF68 /* MovieDetailsViewViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DC2E723D283790AD008AFF68 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				DC2E723E283790BA008AFF68 /* UIScrollView+Helpers.swift */,
+			);
+			path = UIScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -900,6 +911,7 @@
 				DC2E71EA2835B318008AFF68 /* BaseViewModel.swift in Sources */,
 				DC2E71D42835B318008AFF68 /* APIBuilder.swift in Sources */,
 				DC2E7219283616B3008AFF68 /* MoviesListRepositoryContract.swift in Sources */,
+				DC2E723F283790BA008AFF68 /* UIScrollView+Helpers.swift in Sources */,
 				DC2E71E22835B318008AFF68 /* ErrorType+Code.swift in Sources */,
 				DC2E71F52835B318008AFF68 /* ProgressHUD.swift in Sources */,
 				DC2672822835ABD600DC2736 /* MoviesListViewController.swift in Sources */,

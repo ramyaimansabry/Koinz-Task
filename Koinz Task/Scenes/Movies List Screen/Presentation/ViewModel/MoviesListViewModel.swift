@@ -6,11 +6,17 @@
 //
 
 import RxSwift
+import RxCocoa
 
 final class MoviesListViewModel: BaseViewModel {
     private let moviesListRepository: MoviesListRepositoryContract
     private var pageIndex: Int = 1
-    private(set) var movies: BehaviorSubject<[MovieData]> = .init(value: [])
+    private var movies: [MovieData] = [] {
+        didSet {
+            moviesSubject.onNext(movies)
+        }
+    }
+    private(set) var moviesSubject: BehaviorSubject<[MovieData]> = .init(value: [])
     
     init(moviesListRepository: MoviesListRepositoryContract = MoviesListRepository()) {
         self.moviesListRepository = moviesListRepository
@@ -21,7 +27,8 @@ final class MoviesListViewModel: BaseViewModel {
 
 extension MoviesListViewModel {
     func fetchMovies() {
-        pageIndex == 1 ? (stateRelay.accept(.loading)) : ()
+        guard stateRelay.value != .loading else { return }
+        stateRelay.accept(.loading)
         
         moviesListRepository.fetchTopRatedMovies(with: pageIndex)
             .subscribe { [weak self] result in
@@ -53,7 +60,7 @@ extension MoviesListViewModel {}
 private extension MoviesListViewModel {
     func handleOnCompleteFetchingData(using moviesResponse: MoviesResponse) {
         guard let newMovies: [MovieData] = moviesResponse.results, !newMovies.isEmpty else { return }
-        movies.onNext(newMovies)
+        self.movies.append(contentsOf: newMovies)
         
         guard let totalPages = moviesResponse.totalPages, totalPages > pageIndex else { return }
         pageIndex += 1

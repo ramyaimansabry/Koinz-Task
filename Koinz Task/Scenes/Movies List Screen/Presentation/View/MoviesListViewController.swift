@@ -33,8 +33,14 @@ private extension MoviesListViewController {
             .setDelegate(self)
             .disposed(by: disposeBag)
         
+        bindTableViewCellsToData()
+        subscribeOnTableViewCellSelection()
+        subscribeOnReachingTableViewBottomScroll()
+    }
+    
+    func bindTableViewCellsToData() {
         viewModel
-            .movies
+            .moviesSubject
             .asObservable()
             .bind(to: tableView.rx.items) { (tableView, _, data) in
                 let cell: MovieCell = tableView.dequeue()
@@ -42,14 +48,25 @@ private extension MoviesListViewController {
                 return cell
             }
             .disposed(by: disposeBag)
-        
+    }
+    
+    func subscribeOnTableViewCellSelection() {
         tableView
             .rx
             .modelSelected(MovieData.self)
             .subscribe(onNext: { [weak self] movieData in
-                guard let self = self else { return }
-                self.handleOnSelectMovie(with: movieData)
+                self?.handleOnSelectMovie(with: movieData)
             })
+            .disposed(by: disposeBag)
+    }
+    
+    func subscribeOnReachingTableViewBottomScroll() {
+        tableView
+            .rx
+            .reachedBottom(offset: 100)
+            .subscribe { [weak self] _ in
+                self?.viewModel.fetchMovies()
+            }
             .disposed(by: disposeBag)
     }
     
