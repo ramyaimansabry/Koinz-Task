@@ -9,9 +9,14 @@ import RxSwift
 
 final class MoviesListRepository: MoviesListRepositoryContract {
     private let apiService: APIServiceContract
+    private let storage: MoviesStorageContract
     
-    init(apiService: APIServiceContract = APIService.shared) {
+    init(
+        apiService: APIServiceContract = APIService.shared,
+        storage: MoviesStorageContract = MoviesStorageManager()
+    ) {
         self.apiService = apiService
+        self.storage = storage
     }
     
     func fetchTopRatedMovies(
