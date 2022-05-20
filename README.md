@@ -16,12 +16,19 @@ A simple UIKit app that displays movies using TheMoviesDB API for Koinz company
 - RXSwift/RXCocoa
 - Architectural pattern (MVVM)
 - CoreData
+- Unit Testing
+- UI Testing
     
 
-## Used Pods
+## Development Target Pods
 - SwiftLint for code style
 - SDWebImage for image caching
 - RxSwift/RxCocoa
+
+## Testing Target Pods
+- SnapshotTesting
+- RxTest
+- RxBlocking
 
 ## Requirements
 - iOS 13.1 or later.
