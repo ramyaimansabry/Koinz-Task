@@ -82,7 +82,9 @@ private extension MoviesListViewController {
 
 extension MoviesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.width / 2
+        let tableHeight: CGFloat = tableView.frame.width
+        let isWideCell: Bool = viewModel.isWideCell(forCell: indexPath)
+        return isWideCell ? ( tableHeight / 1.3) : (100)
     }
 }
 

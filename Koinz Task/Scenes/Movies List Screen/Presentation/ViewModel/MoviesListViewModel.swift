@@ -53,7 +53,13 @@ extension MoviesListViewModel {
 
 // MARK: - Output Methods
 
-extension MoviesListViewModel {}
+extension MoviesListViewModel {
+    func isWideCell(forCell indexPath: IndexPath) -> Bool {
+        guard indexPath.row % 5 != 0 else { return false }
+        
+        return true
+    }
+}
 
 // MARK: - Private Methods
 
