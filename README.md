@@ -15,6 +15,7 @@ A simple UIKit app that displays movies using TheMoviesDB API for Koinz company
 - UIKit
 - RXSwift/RXCocoa
 - Architectural pattern (MVVM)
+- CoreData
     
 
 ## Used Pods
