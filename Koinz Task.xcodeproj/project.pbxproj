@@ -81,6 +81,8 @@
 		DCB348572837C7ED004AB4E9 /* MoviesStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB348562837C7ED004AB4E9 /* MoviesStorageManager.swift */; };
 		DCB3485D2837C8EB004AB4E9 /* Movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCB3485B2837C8EB004AB4E9 /* Movies.xcdatamodeld */; };
 		DCB3485F2837CCB3004AB4E9 /* MovieDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3485E2837CCB3004AB4E9 /* MovieDataEntity.swift */; };
+		DCB348642837EE5E004AB4E9 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB348632837EE5E004AB4E9 /* Reachability.swift */; };
+		DCB348662837EEE3004AB4E9 /* ReachabilityContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB348652837EEE3004AB4E9 /* ReachabilityContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +164,8 @@
 		DCB348562837C7ED004AB4E9 /* MoviesStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesStorageManager.swift; sourceTree = "<group>"; };
 		DCB3485C2837C8EB004AB4E9 /* Movies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Movies.xcdatamodel; sourceTree = "<group>"; };
 		DCB3485E2837CCB3004AB4E9 /* MovieDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataEntity.swift; sourceTree = "<group>"; };
+		DCB348632837EE5E004AB4E9 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		DCB348652837EEE3004AB4E9 /* ReachabilityContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityContract.swift; sourceTree = "<group>"; };
 		F0F87DCB0D2D2C5AEFEB67EA /* Pods-Koinz Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koinz Task.debug.xcconfig"; path = "Target Support Files/Pods-Koinz Task/Pods-Koinz Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -283,6 +287,7 @@
 		DC2E71662835B318008AFF68 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DCB348622837EE57004AB4E9 /* Reachability */,
 				DC2E71672835B318008AFF68 /* Networking */,
 				DC2E71722835B318008AFF68 /* Constants */,
 				DC2E71782835B318008AFF68 /* Managers */,
@@ -774,6 +779,15 @@
 			path = Cache;
 			sourceTree = "<group>";
 		};
+		DCB348622837EE57004AB4E9 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				DCB348632837EE5E004AB4E9 /* Reachability.swift */,
+				DCB348652837EEE3004AB4E9 /* ReachabilityContract.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -948,9 +962,11 @@
 				DC2E71EF2835B318008AFF68 /* AlertItem.swift in Sources */,
 				DC2E71E32835B318008AFF68 /* ErrorType+Message.swift in Sources */,
 				DCB3484C2837C584004AB4E9 /* CoreDataStoreType.swift in Sources */,
+				DCB348642837EE5E004AB4E9 /* Reachability.swift in Sources */,
 				DC2E71CF2835B318008AFF68 /* NetworkHeaders.swift in Sources */,
 				DCB3485F2837CCB3004AB4E9 /* MovieDataEntity.swift in Sources */,
 				DC2E71DC2835B318008AFF68 /* KeychainKey.swift in Sources */,
+				DCB348662837EEE3004AB4E9 /* ReachabilityContract.swift in Sources */,
 				DC2E71EE2835B318008AFF68 /* AlertAction.swift in Sources */,
 				DC2E71FD2835B318008AFF68 /* Publisher+Helpers.swift in Sources */,
 				DC2E71FB2835B318008AFF68 /* Collection+Helpers.swift in Sources */,

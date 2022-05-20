@@ -26,22 +26,35 @@ class MoviesStorageManager {
 extension MoviesStorageManager: MoviesStorageContract {
     func fetchAll(
         sortDescriptors: [NSSortDescriptor] = []
-    ) -> [MovieData] {
+    ) -> Observable<Result<[MovieData], BaseError>> {
         let fetchRequest = MovieDataEntity.fetchRequest()
         fetchRequest.sortDescriptors = sortDescriptors
         fetchRequest.returnsObjectsAsFaults = false
         
-        var logs: [MovieDataEntity] = .init()
+        var moviesDataEntities: [MovieDataEntity] = .init()
         
         mainContext.performAndWait {
             do {
-                logs = try mainContext.fetch(fetchRequest)
+                moviesDataEntities = try mainContext.fetch(fetchRequest)
             } catch {
                 print("Error fetching logs, error: \(error.localizedDescription)")
             }
         }
         
-        return logs.map({ $0.getMovieData() })
+        return Observable<Result<[MovieData], BaseError>>.create { observer in
+            let moviesData = moviesDataEntities.map({
+                $0.getMovieData()
+            })
+            observer.onNext(.success(moviesData))
+            observer.onCompleted()
+            return Disposables.create()
+        }
+    }
+    
+    func saveAll(_ movies: [MovieData]) {
+        movies.forEach { movie in
+            save(movie)
+        }
     }
     
     func save(_ movieData: MovieData) {

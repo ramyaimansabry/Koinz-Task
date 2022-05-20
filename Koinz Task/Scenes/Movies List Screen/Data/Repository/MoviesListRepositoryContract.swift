@@ -9,6 +9,6 @@ import RxSwift
 
 protocol MoviesListRepositoryContract {
     func fetchTopRatedMovies(
-        with pageIndex: Int
+        using pageIndex: Int
     ) -> Observable<Result<MoviesResponse, BaseError>>
 }

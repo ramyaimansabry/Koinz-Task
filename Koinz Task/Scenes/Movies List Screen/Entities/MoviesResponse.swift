@@ -19,4 +19,16 @@ struct MoviesResponse: Decodable {
         case totalPages = "total_pages"
         case totalResults = "total_results"
     }
+    
+    init(
+        page: Int? = nil,
+        results: [MovieData]?,
+        totalPages: Int?,
+        totalResults: Int? = nil
+    ) {
+        self.page = page
+        self.results = results
+        self.totalPages = totalPages
+        self.totalResults = totalResults
+    }
 }
