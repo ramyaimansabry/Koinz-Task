@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-KoinzTaskTests/Pods-KoinzTaskTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/RxSwift-iOS15.0/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework
+${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework
+${BUILT_PRODUCTS_DIR}/SnapshotTesting/SnapshotTesting.framework
