@@ -1,7 +1,7 @@
 
 # Koinz Movies Task
 
-A simple UIKit app that displays top rated movies using TheMoviesDB API
+A simple UIKit app that displays top-rated movies using TheMoviesDB API
 
 <br />
 
@@ -36,13 +36,13 @@ A simple UIKit app that displays top rated movies using TheMoviesDB API
     
 
 ## Installation
-Dependencies in this project are provided via Cocoapods. Please install all dependecies with
+Dependencies in this project are provided via Cocoapods. Please install all dependencies with
 
 ```bash
 pod install
 ```
 
-if you are using Macbook M1, maybe you will face an error while executing the previous command, so you can try the following commands
+if you are using a Macbook M1, maybe you will face an error while executing the previous command, so you can try the following commands
 ```sh
 sudo arch -x86_64 gem install ffi
 arch -x86_64 pod install
